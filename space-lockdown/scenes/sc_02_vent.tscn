@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://d2yak7m4n5p1"]
+[ext_resource type="PackedScene" path="res://scenes/portal_node.tscn" id="1"]
+[node name="SC02_Vent" type="Node2D"]
+[node name="Background" type="ColorRect" parent="."]
+offset_left = 0; offset_top = 0; offset_right = 800; offset_bottom = 480
+color = Color(0.059, 0.059, 0.082, 1)
+[node name="Floor" type="StaticBody2D" parent="."]
+position = Vector2(400, 470)
+[node name="FShape" type="CollisionShape2D" parent="Floor"]
+shape = SubResource(1)
+[node name="Ceiling" type="StaticBody2D" parent="."]
+position = Vector2(400, 10)
+[node name="CShape" type="CollisionShape2D" parent="Ceiling"]
+shape = SubResource(2)
+[node name="LeftWall" type="StaticBody2D" parent="."]
+position = Vector2(10, 240)
+[node name="LShape" type="CollisionShape2D" parent="LeftWall"]
+shape = SubResource(3)
+[node name="RightWall" type="StaticBody2D" parent="."]
+position = Vector2(790, 240)
+[node name="RShape" type="CollisionShape2D" parent="RightWall"]
+shape = SubResource(4)
+[node name="FloorVisual" type="ColorRect" parent="."]
+offset_left = 0; offset_top = 400; offset_right = 800; offset_bottom = 480
+color = Color(0.078, 0.078, 0.133, 1)
+[node name="SpawnPoint" type="Marker2D" parent="."]
+position = Vector2(400, 380)
+[node name="PortalNP04" parent="." instance=ExtResource("1")]
+position = Vector2(300, 250)
+portal_id = "NP-04"
+target_scene_id = "SC-05"
+target_scene_path = "res://scenes/sc_05_energy.tscn"
+hint_text = "狭窄的垂直通道尽头透出脉动的蓝色光芒……"
+progress_delta = 1
+required_progress = -1
+node_color = Color(0, 1, 0.533, 1)
+[sub_resource type="RectangleShape2D" id="1"]
+size = Vector2(800, 20)
+[sub_resource type="RectangleShape2D" id="2"]
+size = Vector2(800, 20)
+[sub_resource type="RectangleShape2D" id="3"]
+size = Vector2(20, 480)
+[sub_resource type="RectangleShape2D" id="4"]
+size = Vector2(20, 480)

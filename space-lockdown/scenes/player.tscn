@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://c6n3w5m2p8jq"]
+[ext_resource type="Script" path="res://scripts/Player.cs" id="1"]
+[node name="Player" type="CharacterBody2D"]
+groups = ["player"]
+script = ExtResource("1")
+z_index = 10

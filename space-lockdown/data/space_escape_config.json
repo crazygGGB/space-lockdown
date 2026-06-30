@@ -1,0 +1,303 @@
+{
+  "gameTitle": "空间逃离",
+  "version": "1.0",
+  "initialScene": "SC-00",
+  "finalScene": "SC-10",
+  "maxProgress": 10,
+  "transitionDuration": 500,
+  "playerSpeed": 120,
+
+  "spaces": [
+    {
+      "id": "SC-00",
+      "name": "初始空间",
+      "type": "start",
+      "description": "你在一间灰暗的立方体房间中醒来。墙面上有两道闪烁的裂隙，散发着不祥的光芒。",
+      "bgSprite": "assets/scenes/start_bg.png",
+      "nodes": ["NP-00", "NP-01"]
+    },
+    {
+      "id": "SC-01",
+      "name": "数据走廊",
+      "type": "normal",
+      "description": "无限延伸的数据通道在你面前展开，两侧是瀑布般流淌的代码。空气中充满电子设备的嗡鸣声。",
+      "bgSprite": "assets/scenes/corridor_bg.png",
+      "nodes": ["NP-02", "NP-03"]
+    },
+    {
+      "id": "SC-02",
+      "name": "通风管道",
+      "type": "normal",
+      "description": "狭窄的管道只够匍匐前行，金属壁上布满了锈蚀的痕迹。远处隐约传来空气流动的声响。",
+      "bgSprite": "assets/scenes/vent_bg.png",
+      "nodes": ["NP-04", "NP-05"]
+    },
+    {
+      "id": "SC-03",
+      "name": "服务器机房",
+      "type": "normal",
+      "description": "巨大的服务器阵列从地板延伸至天花板，发出低沉的嗡鸣。静电让你的头发都竖了起来。",
+      "bgSprite": "assets/scenes/server_bg.png",
+      "nodes": ["NP-06", "NP-07"]
+    },
+    {
+      "id": "SC-04",
+      "name": "废弃实验室",
+      "type": "normal",
+      "description": "倾倒的设备、破碎的培养皿、墙上诡异的荧光涂鸦……这里曾经发生过可怕的事情。",
+      "bgSprite": "assets/scenes/lab_bg.png",
+      "nodes": ["NP-08", "NP-09"]
+    },
+    {
+      "id": "SC-05",
+      "name": "能源室",
+      "type": "normal",
+      "description": "房间中央是一个巨大的脉动反应堆。每一次脉动都让地板微微震颤，空气中充满臭氧味。",
+      "bgSprite": "assets/scenes/power_bg.png",
+      "nodes": ["NP-10", "NP-11"]
+    },
+    {
+      "id": "SC-06",
+      "name": "控制中心",
+      "type": "normal",
+      "description": "布满屏幕的控制室。大部分屏幕已经熄灭，但有一台仍然显示着『出口坐标已锁定』的信息。",
+      "bgSprite": "assets/scenes/control_bg.png",
+      "nodes": ["NP-12", "NP-13"]
+    },
+    {
+      "id": "SC-07",
+      "name": "生物实验室",
+      "type": "normal",
+      "description": "巨大的培养罐占据了大部分空间，其中漂浮着不明的生物体。空气中有一种甜腻的气味。",
+      "bgSprite": "assets/scenes/bio_bg.png",
+      "nodes": ["NP-14", "NP-15"]
+    },
+    {
+      "id": "SC-08",
+      "name": "核心枢纽",
+      "type": "normal",
+      "description": "次元的核心区域。空间在此处扭曲变形，光线呈现出不可思议的弯曲路径。",
+      "bgSprite": "assets/scenes/core_bg.png",
+      "nodes": ["NP-16", "NP-17"]
+    },
+    {
+      "id": "SC-09",
+      "name": "数据核心",
+      "type": "normal",
+      "description": "一切由 0 和 1 构成的纯粹数字空间。流光在你的周围旋转，构成了这个世界的骨架。",
+      "bgSprite": "assets/scenes/data_bg.png",
+      "nodes": ["NP-18", "NP-19"]
+    },
+    {
+      "id": "SC-10",
+      "name": "最终空间",
+      "type": "final",
+      "description": "一扇巨大的白色大门在你面前缓缓打开。光芒从门缝中倾泻而出，温暖而真实。",
+      "bgSprite": "assets/scenes/final_bg.png",
+      "nodes": []
+    }
+  ],
+
+  "portalNodes": [
+    {
+      "id": "NP-00",
+      "sourceScene": "SC-00",
+      "targetScene": "SC-01",
+      "hintText": "前方闪烁的数据终端似乎在向你招手……",
+      "progressDelta": 1,
+      "requiredProgress": null,
+      "position": { "x": 200, "y": 300 },
+      "interactRadius": 30
+    },
+    {
+      "id": "NP-01",
+      "sourceScene": "SC-00",
+      "targetScene": "SC-02",
+      "hintText": "幽暗的通风管道深处传来低沉的回响……",
+      "progressDelta": 0,
+      "requiredProgress": null,
+      "position": { "x": 550, "y": 200 },
+      "interactRadius": 30
+    },
+    {
+      "id": "NP-02",
+      "sourceScene": "SC-01",
+      "targetScene": "SC-03",
+      "hintText": "破损的服务器阵列仍在低鸣，数据在其中流动……",
+      "progressDelta": 2,
+      "requiredProgress": null,
+      "position": { "x": 250, "y": 250 },
+      "interactRadius": 30
+    },
+    {
+      "id": "NP-03",
+      "sourceScene": "SC-01",
+      "targetScene": "SC-04",
+      "hintText": "向下延伸的阶梯通向黑暗，隐约有化学药剂的刺鼻气味……",
+      "progressDelta": -1,
+      "requiredProgress": null,
+      "position": { "x": 600, "y": 350 },
+      "interactRadius": 30
+    },
+    {
+      "id": "NP-04",
+      "sourceScene": "SC-02",
+      "targetScene": "SC-05",
+      "hintText": "狭窄的垂直通道尽头透出脉动的蓝色光芒……",
+      "progressDelta": 1,
+      "requiredProgress": null,
+      "position": { "x": 300, "y": 250 },
+      "interactRadius": 30
+    },
+    {
+      "id": "NP-05",
+      "sourceScene": "SC-02",
+      "targetScene": "SC-00",
+      "hintText": "通道似乎绕回了原点，你能看到熟悉的裂隙……",
+      "progressDelta": 0,
+      "requiredProgress": null,
+      "position": { "x": 550, "y": 150 },
+      "interactRadius": 30
+    },
+    {
+      "id": "NP-06",
+      "sourceScene": "SC-03",
+      "targetScene": "SC-06",
+      "hintText": "主控台仍然在运作，屏幕上显示着『访问授权』字样……",
+      "progressDelta": 2,
+      "requiredProgress": null,
+      "position": { "x": 350, "y": 280 },
+      "interactRadius": 30
+    },
+    {
+      "id": "NP-07",
+      "sourceScene": "SC-03",
+      "targetScene": "SC-07",
+      "hintText": "墙后的秘密通道里传出令人不安的生物电信号……",
+      "progressDelta": 1,
+      "requiredProgress": null,
+      "position": { "x": 600, "y": 200 },
+      "interactRadius": 30
+    },
+    {
+      "id": "NP-08",
+      "sourceScene": "SC-04",
+      "targetScene": "SC-07",
+      "hintText": "解冻的低温舱中似乎有生命迹象在移动……",
+      "progressDelta": 2,
+      "requiredProgress": null,
+      "position": { "x": 250, "y": 300 },
+      "interactRadius": 30
+    },
+    {
+      "id": "NP-09",
+      "sourceScene": "SC-04",
+      "targetScene": "SC-01",
+      "hintText": "摇摇欲坠的电梯似乎只能上行……但按钮显示着『B2F』",
+      "progressDelta": -2,
+      "requiredProgress": null,
+      "position": { "x": 550, "y": 350 },
+      "interactRadius": 30
+    },
+    {
+      "id": "NP-10",
+      "sourceScene": "SC-05",
+      "targetScene": "SC-08",
+      "hintText": "反应堆的紧急启动键闪烁——『警告：需要授权等级 3』",
+      "progressDelta": 3,
+      "requiredProgress": 3,
+      "position": { "x": 350, "y": 200 },
+      "interactRadius": 30
+    },
+    {
+      "id": "NP-11",
+      "sourceScene": "SC-05",
+      "targetScene": "SC-03",
+      "hintText": "检查杂乱的电源线缆，有一根通向服务器阵列……",
+      "progressDelta": 1,
+      "requiredProgress": null,
+      "position": { "x": 600, "y": 300 },
+      "interactRadius": 30
+    },
+    {
+      "id": "NP-12",
+      "sourceScene": "SC-06",
+      "targetScene": "SC-10",
+      "hintText": "发射台已就绪——『目标锁定：需授权等级 6』",
+      "progressDelta": 3,
+      "requiredProgress": 6,
+      "position": { "x": 400, "y": 200 },
+      "interactRadius": 30
+    },
+    {
+      "id": "NP-13",
+      "sourceScene": "SC-06",
+      "targetScene": "SC-09",
+      "hintText": "『最高机密』文件夹吸引了你的注意，解密进度 90%……",
+      "progressDelta": 1,
+      "requiredProgress": null,
+      "position": { "x": 200, "y": 350 },
+      "interactRadius": 30
+    },
+    {
+      "id": "NP-14",
+      "sourceScene": "SC-07",
+      "targetScene": "SC-08",
+      "hintText": "实验舱后方隐藏着一个紧急逃生出口……",
+      "progressDelta": 1,
+      "requiredProgress": null,
+      "position": { "x": 300, "y": 250 },
+      "interactRadius": 30
+    },
+    {
+      "id": "NP-15",
+      "sourceScene": "SC-07",
+      "targetScene": "SC-04",
+      "hintText": "实验体突然失控！你必须逃离这个区域——但门通向下方……",
+      "progressDelta": -3,
+      "requiredProgress": null,
+      "position": { "x": 550, "y": 350 },
+      "interactRadius": 30
+    },
+    {
+      "id": "NP-16",
+      "sourceScene": "SC-08",
+      "targetScene": "SC-06",
+      "hintText": "主通道的封锁已经解除，前方是明亮的主控区域……",
+      "progressDelta": 2,
+      "requiredProgress": null,
+      "position": { "x": 250, "y": 280 },
+      "interactRadius": 30
+    },
+    {
+      "id": "NP-17",
+      "sourceScene": "SC-08",
+      "targetScene": "SC-10",
+      "hintText": "紧急逃生通道闪烁着绿色指示——『授权等级 8』",
+      "progressDelta": 2,
+      "requiredProgress": 8,
+      "position": { "x": 550, "y": 200 },
+      "interactRadius": 30
+    },
+    {
+      "id": "NP-18",
+      "sourceScene": "SC-09",
+      "targetScene": "SC-10",
+      "hintText": "系统主控密码破解成功——正在打开次元出口……",
+      "progressDelta": 3,
+      "requiredProgress": 7,
+      "position": { "x": 400, "y": 250 },
+      "interactRadius": 30
+    },
+    {
+      "id": "NP-19",
+      "sourceScene": "SC-09",
+      "targetScene": "SC-05",
+      "hintText": "系统缓存区溢出的数据流将你冲入了能量管道……",
+      "progressDelta": -1,
+      "requiredProgress": null,
+      "position": { "x": 200, "y": 350 },
+      "interactRadius": 30
+    }
+  ]
+}
